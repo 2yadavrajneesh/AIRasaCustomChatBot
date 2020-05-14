@@ -1,0 +1,71 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - intro
+  - corona_intro
+  - corona_spread
+
+responses:
+  utter_greet:
+  - text: "Namaste! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_bot_intro:
+    - text: "I Corona Bot. I will show you show you the data of corona virus across the World or India."
+
+  utter_corona_intro:
+    - text: "Coronaviruses are a group of related viruses that cause diseases in mammals
+        and birds. In humans, coronaviruses cause respiratory tract infections that
+        can be mild, such as some cases of the common cold (among other possible causes,
+        predominantly rhinoviruses), and others that can be lethal, such as SARS, MERS,
+        and COVID-19."
+
+  utter_corona_spread:
+    - text: "This virus was first detected in Wuhan City, Hubei Province, China. The
+        first infections were linked to a live animal market, but the virus is now
+        spreading from person-to-person. It’s important to note that person-to-person
+        spread can happen on a continuum. Some viruses are highly contagious (like
+        measles), while other viruses are less so. The virus that causes COVID-19
+        is spreading from person-to-person. Someone who is actively sick with COVID-19
+        can spread the illness to others. That is why we recommend that these patients
+        be isolated either in the hospital or at home (depending on how sick they
+        are) until they are better and no longer pose a risk of infecting others.
+        How long someone is actively sick can vary so the decision on when to release
+        someone from isolation is made on a case-by-case basis in consultation with
+        doctors, infection prevention and control experts, and public health officials
+        and involves considering specifics of each situation including disease severity,
+        illness signs and symptoms, and results of laboratory testing for that patient.
+        The virus that causes COVID-19 seems to be spreading easily and sustainably
+        in the community (“community spread”) in some affected geographic areas. Community
+        spread means people have been infected with the virus in an area, including
+        some who are not sure how or where they became infected."
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_bot_intro
+- utter_corona_intro
+- utter_corona_spread
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

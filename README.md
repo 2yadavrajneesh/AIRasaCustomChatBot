@@ -36,4 +36,3 @@ rasa run actions
 rasa shell
 ```
 
-

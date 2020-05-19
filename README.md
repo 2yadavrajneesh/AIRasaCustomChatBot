@@ -1,19 +1,38 @@
+# Corona-Bot built with Rasa X
 
-# AIRasaCustomChatBot
+## Introduction
+This is a chatbot which helps obtaining live Covid-19 updates for India.
 
-# Steps to run this bot
+Currently the bot supports the following user goals:
 
-From current directory (where README file is present) run:
-
-`pip install rasa`
-
-# cd Rasa Bot
-
- `rasa run actions`
+* Updates of the active, recovered, confirmed, and deaths in different states of India.
+* It provides precautionary measures to be taken during the pandemic.
+* Provides links to the latest news updates by the Indian Government.
 
 
-* from another terminal and change directory to Rasa Bot
+### How to get these updates on your mobile
+##### Step 1: Install telegram
+##### Step 2: search for WY-Corona Bot
+##### Step 3: Talk to the bot for updates
 
-`rasa shell`
 
-# refer steps.png file to proceed
+### How to set up Rasa
+
+#### Step 1
+**Install Rasa**
+```
+pip install rasa
+```
+
+#### Step 2
+**Run actions.py on one terminal**
+```
+rasa run actions
+```
+
+#### Step 3
+**Run the Rasa shell on other terminal to chat with the bot**
+```
+rasa shell
+```
+

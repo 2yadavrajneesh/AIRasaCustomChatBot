@@ -1,6 +1,7 @@
 ## start conversation
 * start
     - utter_aboutus
+    - utter_help
 * other
 	- utter_fallback
 
@@ -196,13 +197,13 @@
 * thanks
     - utter_welcome_and_safety_instructions
 
-## interactive_story_enter_state_1
+## interactive story enter state 1
 * enter_state
     - state_status_form
     - form{"name": "state_status_form"}
     - slot{"requested_slot": "state"}
 
-## interactive_story_enter_state_affirm_1
+## interactive story enter state affirm 1
 * enter_state{"state": "assam"}
     - state_status_form
     - form{"name": "state_status_form"}
@@ -273,7 +274,6 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - utter_did_that_help
-    - utter_did_that_help
 
 ## interactive_story_large_story_1
 * greet
@@ -342,10 +342,8 @@
     - slot{"status": null}
     - form{"name": null}
     - slot{"requested_slot": null}
-    
 * active{"state": "india"}
     - action_get_active_cases_of_india
-    
 * enter_state{"state": "tamil nadu"}
     - state_status_form
     - form{"name": "state_status_form"}
@@ -357,7 +355,6 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - utter_did_that_help
-    
 * recovered+enter_state{"state": "tamil nadu"}
     - state_status_form
     - form{"name": "state_status_form"}
@@ -371,7 +368,6 @@
     - slot{"requested_slot": null}
 
 ## interactive_story_multiple_2
-
 * recovered+enter_state{"state": "tamil nadu"}
     - state_status_form
     - form{"name": "state_status_form"}
@@ -383,13 +379,10 @@
     - slot{"status": null}
     - form{"name": null}
     - slot{"requested_slot": null}
-    
 * enter_state{"state": "rajasthan"}
     - utter_did_that_help
-    
 * thanks
     - utter_welcome_and_safety_instructions
-    
 * recovered+enter_state{"state": "uttar pradesh"}
     - state_status_form
     - form{"name": "state_status_form"}
@@ -402,14 +395,12 @@
     - form{"name": null}
     - slot{"requested_slot": null}
 
-## New Story
+## Long Story
 
 * greet
     - utter_greet
-    
 * help_me
     - utter_help
-    
 * enter_state{"state":"india"}
     - state_status_form
     - form{"name":"state_status_form"}
@@ -420,21 +411,109 @@
     - slot{"status":null}
     - form{"name":null}
     - slot{"requested_slot":null}
-    - utter_did_that_help
-    
 * help_me
     - utter_help
-    
 * deaths
     - action_get_death_rate_of_india
     - utter_did_that_help
-    
 * deny
     - utter_will_do_better
-    
 * active+enter_state{"state":"Kerala"}
     - state_status_form
     - utter_did_that_help
-    
 * thanks
     - utter_welcome_and_safety_instructions
+
+## Issue with deaths
+
+* deaths
+    - action_get_death_rate_of_india
+    - utter_did_that_help
+
+## Recovered and Deaths
+
+* recovered
+    - action_get_recovered_cases_of_india
+* deaths
+    - action_get_death_rate_of_india
+    - utter_did_that_help
+
+## Start Conversation 2
+
+* start
+    - utter_aboutus
+    - utter_help
+
+## what is covid
+* greet
+	- utter_greet
+* what_is_covid
+	- utter_what_is_covid
+* enter_state{"state": "maharashtra"}
+    - state_status_form
+    - form{"name": "state_status_form"}
+    - slot{"state": "Maharashtra"}
+    - slot{"validated": true}
+    - slot{"state": null}
+    - slot{"validated": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_did_that_help
+* affirm
+    - utter_happy_to_help
+
+## District Story 1
+* enter_district{"district": "changlang"}
+    - district_status_form
+    - form{"name": "district_status_form"}
+    - slot{"district": "Changlang"}
+    - slot{"validated": true}
+    - slot{"district": null}
+    - slot{"validated": null}
+    - slot{"status": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* recovered+enter_district{"district": "ramanagara"}
+    - district_status_form
+    - form{"name": "district_status_form"}
+    - slot{"status": "recovered"}
+    - slot{"district": "Ramanagara"}
+    - slot{"validated": true}
+    - slot{"district": null}
+    - slot{"validated": null}
+    - slot{"status": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* deaths+enter_district{"district": "udupi"}
+    - district_status_form
+    - form{"name": "district_status_form"}
+    - slot{"status": "deaths"}
+    - slot{"district": "Udupi"}
+    - slot{"validated": true}
+    - slot{"district": null}
+    - slot{"validated": null}
+    - slot{"status": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* active+enter_district{"district": "kanyakumari"}
+    - district_status_form
+    - form{"name": "district_status_form"}
+    - slot{"status": "active"}
+    - slot{"district": "Kanyakumari"}
+    - slot{"validated": true}
+    - slot{"district": null}
+    - slot{"validated": null}
+    - slot{"status": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* confirmed+enter_district{"district": "jalpaiguri"}
+    - district_status_form
+    - form{"name": "district_status_form"}
+    - slot{"status": "confirmed"}
+    - slot{"district": "Jalpaiguri"}
+    - slot{"validated": true}
+    - slot{"district": null}
+    - slot{"validated": null}
+    - slot{"status": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}

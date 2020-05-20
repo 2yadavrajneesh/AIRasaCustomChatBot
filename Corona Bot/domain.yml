@@ -1,32 +1,39 @@
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
 intents:
-- greet
 - active
 - thanks
-- deny
-- affirm
-- start
-- stop
 - enter_state
 - recovered+enter_state
-- confirmed+enter_state
-- deaths+enter_state
-- active+enter_state
+- stop
 - ask_news
-- ask_precautions
+- confirmed+enter_state
+- greet
+- start
 - deaths
+- deaths+enter_state
+- affirm
+- active+enter_state
+- deny
+- ask_precautions
 - recovered
 - confirmed
 - help_me
 - other
-
+- enter_district
+- deaths+enter_district
+- active+enter_district
+- confirmed+enter_district
+- recovered+enter_district
+- what_is_covid
 entities:
 - state
-
+- district
 slots:
+  district:
+    type: text
+    auto_fill: false
   requested_slot:
     type: unfeaturized
   state:
@@ -38,44 +45,37 @@ slots:
   validated:
     type: bool
     auto_fill: false
-
-
 responses:
   utter_did_that_help:
   - text: Did that help you?
-
   utter_happy_to_help:
   - text: That's great to know! We are always happy to help!
-
   utter_aboutus:
   - text: Greetings! I am a bot designed to provide the latest updates in India. I
       can provide the information about the lastest news by the WHO, precautionary
       measures to be taken and the updates about different states in India.
-
   utter_apologies:
   - text: I'm sorry for not getting it right the first time. Maybe try again?
-
   utter_fallback:
   - text: Sorry. I'm afraid I didn't get you.
-
   utter_finding_info:
   - text: I'm fetching the details for you...
-
   utter_greet:
   - text: Hey there! I am CoronaBot and I give updates about the current COVID-19
       situation in India. Is there anything you would like to know?
-
   utter_help:
   - text: You can ask us queries like (but not limited to):- Deaths in Maharashtra-
       India covid status- Assam recoveries- Confirmed cases in Kerala- Active cases
       Delhi etc.- We will try our best to keep you informed!
-
   utter_welcome_and_safety_instructions:
   - text: You are welcome! Stay Safe
-
   utter_will_do_better:
   - text: Apologies! We'll try to do better next time
-
+  utter_what_is_covid:
+  - text: Coronavirus disease (COVID-19) is an infectious disease caused by a newly
+      discovered coronavirus.
+  utter_thanks:
+  - text: Thank you!
 actions:
 - action_get_active_cases_of_india
 - action_get_confirmed_cases_of_india
@@ -93,6 +93,8 @@ actions:
 - utter_will_do_better
 - utter_fallback
 - utter_help
-
+- utter_thanks
+- utter_what_is_covid
 forms:
 - state_status_form
+- district_status_form

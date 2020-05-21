@@ -5,6 +5,10 @@
 ![](https://youtu.be/C-CfnvxJFgk)
 
 
+![](rasa_t1.png)
+
+![](https://youtu.be/FnATk75Gnuc)
+
 ## Introduction
 This is a chatbot which helps obtaining live Covid-19 updates for India.
 

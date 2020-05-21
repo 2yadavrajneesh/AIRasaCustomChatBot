@@ -45,3 +45,8 @@ OR
 ``` rasa run -m models --enable-api --cors "*" --debug  ``` 
 
 and launch index.html to start web chat
+
+
+[![Watch Video](rasa_t.png)](https://youtu.be/C-CfnvxJFgk)
+
+

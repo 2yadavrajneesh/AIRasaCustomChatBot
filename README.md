@@ -40,4 +40,8 @@ rasa run actions
 ```
 rasa shell
 ```
+OR
 
+``` rasa run -m models --enable-api --cors "*" --debug  ``` 
+
+and launch index.html to start web chat

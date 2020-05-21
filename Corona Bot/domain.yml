@@ -27,9 +27,11 @@ intents:
 - confirmed+enter_district
 - recovered+enter_district
 - what_is_covid
+
 entities:
 - state
 - district
+
 slots:
   district:
     type: text
@@ -45,6 +47,7 @@ slots:
   validated:
     type: bool
     auto_fill: false
+
 responses:
   utter_did_that_help:
   - text: Did that help you?
@@ -76,6 +79,7 @@ responses:
       discovered coronavirus.
   utter_thanks:
   - text: Thank you!
+
 actions:
 - action_get_active_cases_of_india
 - action_get_confirmed_cases_of_india
@@ -95,6 +99,7 @@ actions:
 - utter_help
 - utter_thanks
 - utter_what_is_covid
+
 forms:
 - state_status_form
 - district_status_form

@@ -1,6 +1,8 @@
 # Corona-Bot built with Rasa X
 
 ![](rasa_t.png)
+
+https://youtu.be/C-CfnvxJFgk
 ## Introduction
 This is a chatbot which helps obtaining live Covid-19 updates for India.
 

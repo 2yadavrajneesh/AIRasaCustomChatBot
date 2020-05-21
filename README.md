@@ -1,6 +1,6 @@
 # Corona-Bot built with Rasa X
 
-![](rasa_t1.png)
+![](rasa_t2.png)
 
 ![](https://youtu.be/FnATk75Gnuc)
 

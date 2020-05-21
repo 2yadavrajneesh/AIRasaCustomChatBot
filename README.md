@@ -1,10 +1,5 @@
 # Corona-Bot built with Rasa X
 
-![](rasa_t2.png)
-
-![](https://youtu.be/FnATk75Gnuc)
-
-
 
 
 ![](rasa_t.png)
@@ -53,6 +48,6 @@ OR
 and launch index.html to start web chat
 
 
-[![Watch Video](rasa_t.png)](https://youtu.be/C-CfnvxJFgk)
+[![Watch Video](rasa_t2.png)](https://youtu.be/C-CfnvxJFgk)
 
 

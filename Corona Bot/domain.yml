@@ -27,13 +27,18 @@ intents:
 - confirmed+enter_district
 - recovered+enter_district
 - what_is_covid
+- hospital_status
 
 entities:
 - state
 - district
+- device
 
 slots:
   district:
+    type: text
+    auto_fill: false
+  device:
     type: text
     auto_fill: false
   requested_slot:
@@ -77,6 +82,7 @@ responses:
   utter_what_is_covid:
   - text: Coronavirus disease (COVID-19) is an infectious disease caused by a newly
       discovered coronavirus.
+
   utter_thanks:
   - text: Thank you!
 
@@ -87,6 +93,7 @@ actions:
 - action_get_recovered_cases_of_india
 - action_news_updates
 - action_provide_precautions
+- action_device_search
 - utter_aboutus
 - utter_apologies
 - utter_did_that_help
@@ -99,6 +106,7 @@ actions:
 - utter_help
 - utter_thanks
 - utter_what_is_covid
+
 
 forms:
 - state_status_form

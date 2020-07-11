@@ -353,3 +353,18 @@ class ActiveCases(Action):
         output += f'This data was last updated on {total["lastupdatedtime"]}\n'
         dispatcher.utter_message(output)
         return []
+
+
+class ActionDeviceSearch(Action):
+    '''
+    Actions to be taken for getting Status of hospital device
+    '''
+    def name(self) -> Text:
+        return "action_device_search"
+
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message("It is in good condition")
+        return []

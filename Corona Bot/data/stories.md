@@ -517,3 +517,13 @@
     - slot{"status": null}
     - form{"name": null}
     - slot{"requested_slot": null}
+
+## ask for overall corona details
+* greet
+    - utter_greet
+* device_status
+    - action_device_search
+    - form{"name": "action_device_search"}
+    - form{"name": null}
+* thanks
+    - utter_thanks

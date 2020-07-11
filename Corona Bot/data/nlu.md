@@ -108,6 +108,11 @@
 - I mean [Karnataka](state)
 - Affected  in [Karnataka](state)
 
+## intent:hospital_status
+- what is the status of [ventilator](device) in [Lucknow](district)
+- status of [ventilator](device) in [Lucknow](district)
+
+
 ## intent:deaths
 - dead cases
 - number of deaths
